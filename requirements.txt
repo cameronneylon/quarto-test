@@ -11,3 +11,4 @@ kaleido
 openpyxl
 gitpython
 pypdf2
+pyparsing
