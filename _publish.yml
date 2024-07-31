@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 4a342b32-370a-47c9-b869-66bfffde231b
+      url: 'https://cameronneylon.quarto.pub/global-oa-report'

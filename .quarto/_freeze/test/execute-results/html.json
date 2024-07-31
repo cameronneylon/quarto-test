@@ -1,0 +1,12 @@
+{
+  "hash": "fdbcf3508620dd553aa330415627161b",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Hands-on Exercises: Instructor Version\"\nauthor: \"Danping\"\nformat: html\n---\n\n\n\n\n## Hands-on: Your first Quarto document\n\n### Instructions\n\n1.  Click on `New File` –\\> `Quarto Document` to create a blank `.qmd` file\n2.  **Update YAML header**: title, author, date and set format to html `format: html`\n3.  **Use *visual editor* OR *markdown editor* to add headings** - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\n4.  Add some text in bold or italics\n5.  Render the document using the `Render` button\n\n## Hands-on: Markdown Basics\n\n### Instructions:\n\n1.  Add some **numbered list** and **non-numbered list**, using the *visual editor.* Switch back to the *markdown editor* and take note of the syntax. Try creating lists using codes as well.\n\n2.  Add a piece of text and **hyperlink** it to a URL.\n\n3.  Insert the **image** of a cat cafe into your report. The path to the image is `cat-cafe.jpg`\n\n    ::: callout-tip\n    Hint: Use the syntax `![caption](path_to_image)`. For example, `![Elephant](elephant.png)`\n    :::\n\n4.  Add some executable R code or verbatim code (feel free to use the codes below in the Sample Report).\n\n5.  Render the document to see the output.\n\n## Sample Report\n\nFeel free to make use of this sample report and try recreating it in your First Quarto Document!\n\n## Testing python code\n\n::: {#50c58e79 .cell execution_count=1}\n``` {.python .cell-code}\na = 1\nb = 2\nprint(a + b)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n3\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "test_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

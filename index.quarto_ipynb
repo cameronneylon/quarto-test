@@ -1,0 +1,118 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Global OA Report\"\n",
+        "format: html\n",
+        "echo: False\n",
+        "---"
+      ],
+      "id": "003824a6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import parameters\n",
+        "from process import *\n",
+        "\n",
+        "data = report_numbers(af=None, quarto=True)\n",
+        "git = git_status(af=None, quarto=True)"
+      ],
+      "id": "c688c7a2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# THE GLOBAL STATE OF OPEN ACCESS `{python} parameters.REPORT_YEAR`\n",
+        "\n",
+        "## Summary\n",
+        "\n",
+        "At the end of `{python} data['report_year']` the global open access level for research published in\n",
+        "`{python} data['census_year']['year']` reached `{python} data['census_year']['pc_open']`% with an increase of\n",
+        "`{python} data['census_year']['pc_open_increase']`% compared to\n",
+        "outputs published in `{python} data['comparison_year']['year']`. Access provided through publisher websites\n",
+        "increased by `{python} data['census_year']['pc_publisher_increase']`% to\n",
+        "`{python} data['census_year']['pc_publisher']`% for `{python} data['comparison_year']['year']` publications.\n"
+      ],
+      "id": "034bd29d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "fig_oa_global_trend(af=None, quarto=True)"
+      ],
+      "id": "40f437d5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Access through other platforms was `{python} data['census_year'].pc_other_platform`% in \n",
+        "`{python} data['census_year']['year']` with no growth compared to `{python} data['comparison_year']['year']` publications. \n",
+        "This may be the result of embargos depressing rates of access through repositories for the most recent years of \n",
+        "publication. Zero-embargo access through non-publisher platforms for `{python} data['census_year']['year']` \n",
+        "was `{python} data['census_year']['pc_other_platform_zero_embargo']`% of all outputs available through other platforms.\n",
+        "Future reports will track the evolution of immediate other platform open access over time.\n",
+        "\n",
+        "## Open Access by Country\n",
+        "\n",
+        "The countries with the highest levels of open access continue to be countries will small publication output numbers, \n",
+        "with Indonesia and Brazil dominating amongst countries with more than 10,000 outputs in \n",
+        "`{python} data['census_year']['year']` with a set of European countries following. \n",
+        "European countries tend to show higher levels of open access through other platforms, compared to other countries\n",
+        "with high levels of accessibility and this is in part due to generally shorter embargos, particularly in north-western\n",
+        "Europe.\n"
+      ],
+      "id": "91f035db"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "fig_oa_country_compare(af=None, quarto=True)"
+      ],
+      "id": "ffae70bc",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Methodology\n",
+        "\n",
+        "The primary data table used was the final DOI table in the Academic Observatory for \n",
+        "`{python} data['report_year']`, bigquery://academic-observatory.observatory.doi20211211. Open Access types and\n",
+        "the analysis for categorising them from Unpaywall are as described on the \n",
+        "[COKI Open Access Dashboard](https://open.coki.ac/how/).\n",
+        "\n",
+        "This report was generated automatically from the source data on ##### and the relevant code and\n",
+        "state of the repository is available [on github](`{python} git['remote_url']`):\n",
+        "\n",
+        "* Commit hash: `{python} git['sha']\n",
+        "* Branch: `{python} git['branch']"
+      ],
+      "id": "c46c9570"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/266883j/PycharmProjects/quarto-test/venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

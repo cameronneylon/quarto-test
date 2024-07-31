@@ -1,0 +1,13 @@
+pandas
+precipy
+pandas-gbq
+plotly
+num2words
+xhtml2pdf
+tables
+statsmodels
+notebook
+kaleido
+openpyxl
+gitpython
+pypdf2
