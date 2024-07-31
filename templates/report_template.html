@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Global OA Report</title>
+<title>report_template – Global OA Report</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,17 +68,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Global OA Report</span>
     </a>
   </div>
@@ -89,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -107,32 +107,64 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#open-access-by-country" id="toc-open-access-by-country" class="nav-link" data-scroll-target="#open-access-by-country">Open Access by Country</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
+<p>{% import “report_macros.md” as helper with context %} {% include “report_css.html” %}</p>
+<p>{% set report_numbers = load_json(report_numbers.files[“report_numbers.json”].cache_filepath) %} {% set git_status = load_json(git_status.files[“git_status.json”].cache_filepath) %}</p>
+<!-- Title Page -->
+<p><pdf:nexttemplate name="titlepage"></pdf:nexttemplate></p>
+<p class="subtitle">
+THE GLOBAL STATE OF OPEN ACCESS {{ report_numbers.report_year }}
+</p>
+<p class="titlemeta">
+<br>REPORT DATE: {{ helper.created_at()|upper }}
+</p>
+<p class="titlemeta">
+<br>CENSUS PERIOD: {{ report_numbers.census_year.year }}
+</p>
+<!-- switch page templates -->
+<p><pdf:nexttemplate name="report"></pdf:nexttemplate></p>
+<p><pdf:nextpage></pdf:nextpage></p>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>At the end of {{ report_numbers.report_year }} the global open access level for research published in {{ report_numbers.census_year.year }} reached {{ report_numbers.census_year.pc_open }}% with an increase of {{ report_numbers.census_year.pc_open_increase }}% compared to outputs published in {{ report_numbers.comparison_year.year }}. Access provided through publisher websites increased by {{ report_numbers.census_year.pc_publisher_increase }}% to {{ report_numbers.census_year.pc_publisher }}% for {{ report_numbers.comparison_year.year }} publications.</p>
+<p><img src="{{ fig_oa_global_trend.files[&quot;oa_global_trend.png&quot;].cache_filepath }}" class="img-fluid"></p>
+<p>Access through other platforms was {{ report_numbers.census_year.pc_other_platform }}% in {{ report_numbers.census_year.year }} with no growth compared to {{ report_numbers.comparison_year.year }} publications. This may be the result of embargos depressing rates of access through repositories for the most recent years of publication. Zero-embargo access through non-publisher platforms for {{ report_numbers.census_year.year }} was {{ report_numbers.census_year.pc_other_platform_zero_embargo }}% of all outputs available through other platforms. Future reports will track the evolution of immediate other platform open access over time.</p>
+<p><pdf:nextpage></pdf:nextpage></p>
+</section>
+<section id="open-access-by-country" class="level1">
+<h1>Open Access by Country</h1>
+<p>The countries with the highest levels of open access continue to be countries will small publication output numbers, with Indonesia and Brazil dominating amongst countries with more than 10,000 outputs in {{ report_numbers.census_year.year }} with a set of European countries following. European countries tend to show higher levels of open access through other platforms, compared to other countries with high levels of accessibility and this is in part due to generally shorter embargos, particularly in north-western Europe.</p>
+<p><img src="{{ fig_oa_country_compare.files[&quot;oa_country_compare.png&quot;].cache_filepath }}" class="img-fluid"></p>
+<p><pdf:nextpage></pdf:nextpage></p>
+</section>
+<section id="methodology" class="level1">
+<h1>Methodology</h1>
+<p>The primary data table used was the final DOI table in the Academic Observatory for {{ report_numbers.report_year }}, bigquery://academic-observatory.observatory.doi20211211. Open Access types and the analysis for categorising them from Unpaywall are as described on the <a href="https://open.coki.ac/how/">COKI Open Access Dashboard</a>.</p>
+<p>This report was generated automatically from the source data on {{ helper.created_at() }} and the relevant code and state of the repository is available <a href="{{ git_status.remote_url }}">on github</a>:</p>
+<ul>
+<li>Commit hash: <code>{ git_status.sha }</code></li>
+<li>Branch: <code>{ git_status.branch }</code></li>
+</ul>
+<p><pdf:nexttemplate name="lastpage"> <pdf:nextpage></pdf:nextpage></pdf:nexttemplate></p>
 
-    
-  
-    
-  </div>
-  
 
-
-</header>
-
-
-<p>About this site</p>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -227,7 +259,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/cameronneylon\.github\.io\/quarto-test\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Danping">
 
-<title>About – Global OA Report</title>
+<title>Hands-on Exercises: Instructor Version – Global OA Report</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -107,19 +142,42 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#hands-on-your-first-quarto-document" id="toc-hands-on-your-first-quarto-document" class="nav-link active" data-scroll-target="#hands-on-your-first-quarto-document">Hands-on: Your first Quarto document</a>
+  <ul class="collapse">
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
+  </ul></li>
+  <li><a href="#hands-on-markdown-basics" id="toc-hands-on-markdown-basics" class="nav-link" data-scroll-target="#hands-on-markdown-basics">Hands-on: Markdown Basics</a>
+  <ul class="collapse">
+  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions:</a></li>
+  </ul></li>
+  <li><a href="#sample-report" id="toc-sample-report" class="nav-link" data-scroll-target="#sample-report">Sample Report</a></li>
+  <li><a href="#testing-python-code" id="toc-testing-python-code" class="nav-link" data-scroll-target="#testing-python-code">Testing python code</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Hands-on Exercises: Instructor Version</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Danping </p>
+          </div>
+  </div>
     
   
     
@@ -130,9 +188,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<section id="hands-on-your-first-quarto-document" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-your-first-quarto-document">Hands-on: Your first Quarto document</h2>
+<section id="instructions" class="level3">
+<h3 class="anchored" data-anchor-id="instructions">Instructions</h3>
+<ol type="1">
+<li>Click on <code>New File</code> –&gt; <code>Quarto Document</code> to create a blank <code>.qmd</code> file</li>
+<li><strong>Update YAML header</strong>: title, author, date and set format to html <code>format: html</code></li>
+<li><strong>Use <em>visual editor</em> OR <em>markdown editor</em> to add headings</strong> - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor</li>
+<li>Add some text in bold or italics</li>
+<li>Render the document using the <code>Render</code> button</li>
+</ol>
+</section>
+</section>
+<section id="hands-on-markdown-basics" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-markdown-basics">Hands-on: Markdown Basics</h2>
+<section id="instructions-1" class="level3">
+<h3 class="anchored" data-anchor-id="instructions-1">Instructions:</h3>
+<ol type="1">
+<li><p>Add some <strong>numbered list</strong> and <strong>non-numbered list</strong>, using the <em>visual editor.</em> Switch back to the <em>markdown editor</em> and take note of the syntax. Try creating lists using codes as well.</p></li>
+<li><p>Add a piece of text and <strong>hyperlink</strong> it to a URL.</p></li>
+<li><p>Insert the <strong>image</strong> of a cat cafe into your report. The path to the image is <code>cat-cafe.jpg</code></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hint: Use the syntax <code>![caption](path_to_image)</code>. For example, <code>![Elephant](elephant.png)</code></p>
+</div>
+</div></li>
+<li><p>Add some executable R code or verbatim code (feel free to use the codes below in the Sample Report).</p></li>
+<li><p>Render the document to see the output.</p></li>
+</ol>
+</section>
+</section>
+<section id="sample-report" class="level2">
+<h2 class="anchored" data-anchor-id="sample-report">Sample Report</h2>
+<p>Feel free to make use of this sample report and try recreating it in your First Quarto Document!</p>
+</section>
+<section id="testing-python-code" class="level2">
+<h2 class="anchored" data-anchor-id="testing-python-code">Testing python code</h2>
+<div id="50c58e79" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3</code></pre>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -227,7 +338,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/cameronneylon\.github\.io\/quarto-test\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

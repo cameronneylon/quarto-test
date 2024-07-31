@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Global OA Report",
     "section": "",
-    "text": "This report was run from the git commit hash: a05bc2c3bf6ba5f025d541c8deb148b108bf0551\nWARNING: This report was run with local changes that were not committed to the following files: \n['.quarto/_freeze/index/execute-results/html.json', '.quarto/idx/about.qmd.json', '.quarto/idx/index.qmd.json', '.quarto/idx/test.qmd.json', '.quarto/xref/5e4127d7', '.quarto/xref/d02ca460', '_quarto.yml', 'index.qmd', 'index.quarto_ipynb', 'process.py']"
+    "text": "This report was run from the git commit hash: a8ce03567f07504afd706107353a87aec2651abd\nWARNING: This report was run with local changes that were not committed to the following files: \n['.quarto/idx/about.qmd.json', '.quarto/idx/index.qmd.json', '.quarto/xref/d02ca460', 'index.quarto_ipynb']"
   },
   {
     "objectID": "index.html#summary",
@@ -32,6 +25,13 @@
     "href": "index.html#methodology",
     "title": "Global OA Report",
     "section": "Methodology",
-    "text": "Methodology\nThe primary data table used was the final DOI table in the Academic Observatory for 2021, bigquery://academic-observatory.observatory.doi20211211. Open Access types and the analysis for categorising them from Unpaywall are as described on the COKI Open Access Dashboard.\nThis report was generated automatically from the source data on ##### and the relevant code and state of the repository is available on github:\n\nCommit hash: a05bc2c3bf6ba5f025d541c8deb148b108bf0551\nBranch: main"
+    "text": "Methodology\nThe primary data table used was the final DOI table in the Academic Observatory for 2021, bigquery://academic-observatory.observatory.doi20211211. Open Access types and the analysis for categorising them from Unpaywall are as described on the COKI Open Access Dashboard.\nThis report was generated automatically from the source data on ##### and the relevant code and state of the repository is available on github:\n\nCommit hash: a8ce03567f07504afd706107353a87aec2651abd\nBranch: main"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]
