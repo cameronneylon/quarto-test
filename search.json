@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Global OA Report",
+    "section": "",
+    "text": "This report was run from the git commit hash: a05bc2c3bf6ba5f025d541c8deb148b108bf0551\nWARNING: This report was run with local changes that were not committed to the following files: \n['.quarto/_freeze/index/execute-results/html.json', '.quarto/idx/about.qmd.json', '.quarto/idx/index.qmd.json', '.quarto/idx/test.qmd.json', '.quarto/xref/5e4127d7', '.quarto/xref/d02ca460', '_quarto.yml', 'index.qmd', 'index.quarto_ipynb', 'process.py']"
+  },
+  {
+    "objectID": "index.html#summary",
+    "href": "index.html#summary",
+    "title": "Global OA Report",
+    "section": "Summary",
+    "text": "Summary\nAt the end of 2021 the global open access level for research published in 2020 reached 49% with an increase of 3% compared to outputs published in 2019. Access provided through publisher websites increased by 3% to 42% for 2019 publications.\n\n\n                                                \n\n\nAccess through other platforms was 21% in 2020 with no growth compared to 2019 publications. This may be the result of embargos depressing rates of access through repositories for the most recent years of publication. Zero-embargo access through non-publisher platforms for 2020 was 32% of all outputs available through other platforms. Future reports will track the evolution of immediate other platform open access over time."
+  },
+  {
+    "objectID": "index.html#open-access-by-country",
+    "href": "index.html#open-access-by-country",
+    "title": "Global OA Report",
+    "section": "Open Access by Country",
+    "text": "Open Access by Country\nThe countries with the highest levels of open access continue to be countries will small publication output numbers, with Indonesia and Brazil dominating amongst countries with more than 10,000 outputs in 2020 with a set of European countries following. European countries tend to show higher levels of open access through other platforms, compared to other countries with high levels of accessibility and this is in part due to generally shorter embargos, particularly in north-western Europe."
+  },
+  {
+    "objectID": "index.html#methodology",
+    "href": "index.html#methodology",
+    "title": "Global OA Report",
+    "section": "Methodology",
+    "text": "Methodology\nThe primary data table used was the final DOI table in the Academic Observatory for 2021, bigquery://academic-observatory.observatory.doi20211211. Open Access types and the analysis for categorising them from Unpaywall are as described on the COKI Open Access Dashboard.\nThis report was generated automatically from the source data on ##### and the relevant code and state of the repository is available on github:\n\nCommit hash: a05bc2c3bf6ba5f025d541c8deb148b108bf0551\nBranch: main"
+  }
+]
