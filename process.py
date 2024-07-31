@@ -245,10 +245,10 @@ def fig_oa_global_trend(af: AnalyticsFunction,
     fig.update_xaxes(title_text="Year", row=2, col=2)
     fig.update_layout(legend=dict(
         orientation="v",
-        yanchor="bottom",
+        yanchor="top",
         y=0.9,
         xanchor="center",
-        x=0.5
+        x=0.9
     ))
 
     if quarto:
@@ -265,7 +265,8 @@ def fig_oa_global_trend(af: AnalyticsFunction,
 def fig_oa_country_compare(af: AnalyticsFunction,
                            quarto: bool=False):
     # create and save locally a figure displaying country OA summaries
-    print('... start fig_oa_country_trend')
+    if not quarto:
+        print('... start fig_oa_country_trend')
     df = pd.read_csv('tempdata/oa_country_trend.csv')
     df.replace('United Kingdom of Great Britain and Northern Ireland', 'United Kingdom', inplace=True)
     df_agg = df.groupby(['name']).agg('sum')
@@ -339,7 +340,8 @@ def fig_oa_country_compare(af: AnalyticsFunction,
 def fig_oa_country_trend(af: AnalyticsFunction,
                          quarto: bool=False):
     # create and save locally a figure displaying country OA trends
-    print('... start fig_oa_country_trend')
+    if not quarto:
+        print('... start fig_oa_country_trend')
     df = pd.read_csv('tempdata/oa_country_trend.csv')
 
     # calculate total outputs and open access percentages, notes year begin and year end

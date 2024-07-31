@@ -27,7 +27,7 @@ increased by `{python} data['census_year']['pc_publisher_increase']`% to
 fig_oa_global_trend(af=None, quarto=True)
 ```
 
-Access through other platforms was `{python} data['census_year'].pc_other_platform`% in 
+Access through other platforms was `{python} data['census_year']['pc_other_platform']`% in
 `{python} data['census_year']['year']` with no growth compared to `{python} data['comparison_year']['year']` publications. 
 This may be the result of embargos depressing rates of access through repositories for the most recent years of 
 publication. Zero-embargo access through non-publisher platforms for `{python} data['census_year']['year']` 
@@ -57,5 +57,5 @@ the analysis for categorising them from Unpaywall are as described on the
 This report was generated automatically from the source data on ##### and the relevant code and
 state of the repository is available [on github](`{python} git['remote_url']`):
 
-* Commit hash: `{python} git['sha']
-* Branch: `{python} git['branch']
+* Commit hash: `{python} git['sha']`
+* Branch: `{python} git['branch']`
